@@ -214,12 +214,12 @@ require '../koneksi.php';
          $penanggung = $_POST['penanggung'];
          $tgl = $_POST['tgl'];
          $ket = $_POST['ket'];
-         $masuk = $_POST['jml'];
-         $sql = mysqli_query($koneksi, "INSERT INTO kas (id, penanggung, keterangan, tgl, masuk, jenis, keluar) VALUES ('$id', '$penanggung', '$ket', '$tgl', '$masuk', 'masuk', 0)");
+         $keluar = $_POST['jml'];
+         $sql = mysqli_query($koneksi, "INSERT INTO kas (id, penanggung, keterangan, tgl, masuk, jenis, keluar) VALUES ('$id', '$penanggung', '$ket', '$tgl', 0 , 'keluar', '$keluar')");
        if($sql) {
          echo "
           <script>
-          document.location.href = 'masuk.php';       
+          document.location.href = 'keluar.php';       
           </script>";   
                  }
              }
